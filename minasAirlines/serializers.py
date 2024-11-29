@@ -4,7 +4,7 @@ from minasAirlines.models import Airplane, Hangar
 class AirplaneSerializer(serializers.ModelSerializer):
     class Meta:
         model = Airplane
-        fields = ['id', 'matricula', 'numero_Voo', 'modelo', 'procedencia', 'destino', 'numero_passageiros']
+        fields = ['id', 'matricula', 'numero_Voo', 'modelo', 'procedencia', 'destino', 'numero_passageiros', 'hangar']
 
 class HangarSerializer(serializers.ModelSerializer):
     aeronaves = AirplaneSerializer(many=True, read_only=True)  # Incluindo as aeronaves associadas
