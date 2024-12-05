@@ -26,6 +26,6 @@ router.register('hangars', HangarViewSet, basename='Hangars')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),  # Inclui as rotas do router
+    path('', include(router.urls)), 
     path('hangars/<int:pk>/airplanes/', ListaAeronavesHangar.as_view(), name='airplanes-by-hangar'),  # Rota para listar aeronaves por hangar
 ]
